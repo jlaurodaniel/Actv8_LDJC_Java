@@ -26,15 +26,15 @@ public class Deck {
     }
 
     public Card head(){
-        Card pick=baraja.remove(getRandomBetween(0,baraja.size()-1));
+        Card pick=baraja.remove(0);
         System.out.println("La primera carta es: Palo ["+pick.palo+"] "+"Color: ["+pick.color+"] Valor:["+pick.Valor+"]");
         System.out.println("Quedan "+baraja.size()+" numero de cartas en este Deck");
         return pick;
     }
 
     public void pick(){
-        Card head=baraja.remove(0);
-        System.out.println("La primera carta es: Palo ["+head.palo+"] "+"Color: ["+head.color+"] Valor:["+head.Valor+"]");
+        Card head=baraja.remove(getRandomBetween(0,baraja.size()-1));
+        System.out.println("La carta es: Palo ["+head.palo+"] "+"Color: ["+head.color+"] Valor:["+head.Valor+"]");
         System.out.println("Quedan "+baraja.size()+" numero de cartas en este Deck");
     }
 
