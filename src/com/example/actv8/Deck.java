@@ -25,20 +25,20 @@ public class Deck {
         System.out.println("Se mezcló el Deck...");
     }
 
-    public Card head(){
+    public Card head()throws IndexOutOfBoundsException{
         Card pick=baraja.remove(0);
         System.out.println("La primera carta es: Palo ["+pick.palo+"] "+"Color: ["+pick.color+"] Valor:["+pick.Valor+"]");
         System.out.println("Quedan "+baraja.size()+" numero de cartas en este Deck");
         return pick;
     }
 
-    public void pick(){
+    public void pick()throws IndexOutOfBoundsException{
         Card head=baraja.remove(getRandomBetween(0,baraja.size()-1));
         System.out.println("La carta es: Palo ["+head.palo+"] "+"Color: ["+head.color+"] Valor:["+head.Valor+"]");
         System.out.println("Quedan "+baraja.size()+" numero de cartas en este Deck");
     }
 
-    public ArrayList<Card> hand() {
+    public ArrayList<Card> hand()throws IndexOutOfBoundsException{
         Mano.clear();
         for (int i=1;i<=5;i++){
             Mano.add(baraja.remove(getRandomBetween(0,baraja.size()-1)));
